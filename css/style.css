@@ -1,0 +1,504 @@
+/* ここから下に記載していく */
+@charset "UTF-8";
+html{
+    font-size:100%; /*ユーザー設定の文字サイズを正しく反映*/
+}
+*{
+    box-sizing:border-box; /*余白や線を幅や高さに含める*/
+}
+img{
+    max-width:100%; /*画像が親要素からはみ出すのを防ぐ*/
+    height:auto;
+}
+body{
+    background: color #fff;;
+    width:100%;
+    max-width: 1200px;
+    margin:auto;
+    padding:auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+header{
+    /* width:100%;
+    padding: 2%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul{
+    display:flex;
+}
+header li{
+    font-size: 21px;
+    margin-left: 40px;
+    margin-right: 50px;
+}
+a{text-decoration:none;
+    color:#333;}
+
+.container{
+    position:relative;
+    text-align: center;
+    background-color: #fafafa;
+    font-size: 150%;
+}
+.boxtext{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.boxtext b{
+    font-size: 150%;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.text{
+    text-align: center;
+    color:#ffd61a;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.text1{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30pxpx;
+    margin-bottom: 60px;
+}
+.text2{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 80px;
+    line-height: 40px;
+}
+.text2 br{
+    height: 40px;
+}
+.about{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.about_01 {
+    width: 25%;
+    margin-left: -2px;
+}
+.about_02 {
+    width: 25%;
+    margin-left: -1px;
+}
+
+.about_03 {
+    width: 25%;
+}
+.about_04 {
+    width: 25%;
+    margin-right: -2px;
+}
+.COURSE1{
+    text-align: center;
+    margin-top: 60px;
+    font-weight: bold;
+}
+.COURSE2{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    line-height: 30px;
+}
+.course-wrapper {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    padding: auto;
+    background-color: #fafafa;
+  }
+  :nth-of-type(even) {
+  flex-direction: row-reverse;
+  }
+  .course1, .course2 {
+    width: 50%;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+  }
+  .course {
+    padding: 60px;
+    box-sizing: border-box;
+  }
+ 
+  .course1title {
+    font-size: 18px;
+    font-weight: bolder;
+}
+  .course1text{
+    max-width:60px;
+  }
+  .course1txt p {
+      font-size: 16px;
+      text-align: center;
+      margin-top: 120px;
+      margin-left: 50px;
+      padding: 30px;
+      display: flex;
+  }
+  .course2 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+.NEWS{
+    text-align: center;
+    justify-content: space-between;
+    text-align: center;
+    color:#ffd61a;
+    font-size: 24px;
+    margin-top: 120px;
+  }
+.NEWS h2{
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+}
+.NEWSbox{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding: 120px;
+}
+.news{
+    max-width: 300px;
+}
+.news h2{
+    margin-top: 30px;
+    margin-bottom: 24px;
+}
+.news p{
+    line-height: 1;
+}
+.MOREbutton{
+    display: block;
+    width: 300px;
+    height: 60px;
+    line-height: 300px;
+    margin:auto;
+    padding:auto;
+    margin-top: 0;
+    font-size: 18px;
+    text-align: center;
+    justify-items: center;  
+    color: white;
+    background-color: #ffd61a;
+    }
+.MOREbutton p{
+    line-height: 60px;
+    margin: 60px;
+}
+
+.ACCESS{
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+}
+.ACCESS h2{
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+    padding: 40px;
+    font-size: 18px;
+}
+.ACCESS p{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+.map iframe{
+    width: 100%;
+    height:300px;
+    margin: auto;
+}
+.adress{
+    text-align: center;
+    line-height: 0px;
+    text-size-adjust: 50px;
+    background-color: #fafafa;
+    padding: auto;
+}
+.announce{
+    text-align: center;
+    margin: auto;
+    margin-top: 120px;
+    margin-bottom: 60px;
+}
+.announce h1{
+    font-weight: bold;
+    font-size: 18px;
+}
+.announce h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contact{
+    width: 800;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 60px;
+}
+.contact-table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+.contact-item , .contact-body {
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+.contact-item {
+    text-align: left; /* テキスト左寄せ */
+    vertical-align: top;
+    width: 328px; /* 横幅30%指定（グレーの背景色部分） */
+    background-color: white;
+    border-right: none;
+    border-left: none;
+  } 
+.contact-body {
+    width: 328px; /* 横幅70%指定（白背景色部分） */
+    border-right: none;
+  }
+.form-text{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    max-width: 400px;
+}
+.form-select {
+    width: 180px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-reason {
+    display: block;
+  }
+  
+  .contact-reason + .contact-reason {
+    margin-top: 10px;
+  }
+  
+  .contact-reason-txt {
+    margin-left: 5px;
+  }
+
+
+.reason-check {
+    display: block;
+  }
+.reason-txt {
+    margin-left: 5px;
+  }
+.form-textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    max-width: 400px;
+}
+
+@media print,screen and (min-width: 800px) {
+    dl {
+    display: table;
+    }
+    
+    dl dt, dl dd {
+    display: table-cell;
+    }
+   }
+
+   .contact-table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+   .contact-submit {
+    width: 300px; /* 横幅指定 */
+    height: 60;
+    background-color: #ffd61a; /* 背景色 */
+    color: white; /* 文字色 */
+    font-weight: bold; /* 文字の太さ */
+    display: block; /* インライン要素をブロック要素に変更 */
+    margin: 0 auto; /* 中央寄せ */
+    margin-top: 30px;
+    margin-bottom: 140px;
+    font-size: 18px; /* 文字の大きさ */
+    padding: 15px; /* 内側の余白 */
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+  }
+  
+  .copyright{
+    color: #fafafa;
+    background-color: #707070;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 30px;
+    margin-top: 80px;
+    margin-bottom: 140px;
+  }
+
+  @keyframes slide-in{
+    0%{
+      top: -600px; /*画面外*/
+      visibility: hidden;
+    }
+    100%{
+      top: 0; /*画面上部*/
+      visibility: visible;
+    }
+  }
+  
+  /******************************
+   追従バナー
+  ******************************/
+  .float-banner{
+    display: inline-block; /*中身の高さで変動*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px; /*画面幅*/
+    background: #fafafa;
+    text-align: center;
+    animation: slide-in 3s ease forwards;/*登場*/
+    animation-delay: 0s; /*登場の遅延時間*/
+    transition: 1s ease-in-out; /*スライド時の動き*/
+  }
+  
+  /* バナー下の枠線 */
+  .float-banner:after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 70px; /*ボタン分の幅を左に確保*/
+    width: calc(100% - 70px);
+    height: 5px;
+    background: #fafafa;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,20%), 0px -1px 2px -1px rgba(0,0,0,15%);
+  }
+  
+  /* スライドボタンをクリック */
+  #slide:checked ~ .float-banner{
+    transform: translateY(-100%); /*画面外(上)へ*/
+  }
+  
+  /**************************************
+   表示・非表示を切り替えるスライドボタン
+  ***************************************/
+  .slide-btn{
+    position: absolute;
+    top: calc(100% + 5px); /*枠線分を空ける*/
+    left: 0;
+    width: 70px;
+    height: 25px;
+    border-radius: 0 0 6px 0; /*右下だけ丸く*/
+    background: #fafafa;
+    box-shadow: 1px 2px 3px rgba(0,0,0,25%);
+  }
+  
+  /* スライドボタンの文字 */
+  .slide-btn:before{
+    content: "^";
+    position: absolute;
+    top: 65%; /*上寄りの文字なので少し調整*/
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 16px;
+    font-weight: bold; /*太字*/
+    color: #666;
+  }
+  
+  /* スライドボタン上の枠線部分 */
+  .slide-btn:after{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 70px;
+    height: 5px;
+    background: #fafafa;
+    box-shadow: 0px -1px 2px -1px rgba(0,0,0,15%);
+  }
+  
+  /* クリックで矢印を反転 */
+  #slide:checked ~ .float-banner .slide-btn:before{
+    top: 35%; /*下寄りの文字なので少し調整*/
+    transform: translate(-50%,-50%) rotate(180deg);
+  }
+
+  .floating-banner {
+    position: fixed; /* バナーを追従させる */
+    z-index: 99999; /* 他の要素の下に隠れないように */
+    bottom: 0; /* バナーの上下の位置 */
+    right: 0; /* バナーの左右の位置 */
+    width: 120px; /* バナーの横幅 */
+  }
+  .floating-banner__image {
+    max-width: 300px; /* 画像の最大幅 */
+  }
+.floating-banner1 {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+}
+.banner1 {
+    width: 300px;/* バナーの横幅 */
+    margin: auto;
+    padding: auto;
+    background: linear-gradient(86.13deg, #54c8d1 -3.42%, #93d93e 59.59%);/* バナーの背景色 */
+    color: #fff;/* バナー内の文字色 */
+    font-weight: bold;
+    text-align: center;
+}
+.floating-banner a {
+    text-decoration: none;/* リンクに下線が入らないように */
+}
+.copy {
+    font-size: 20px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+.cta {
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    background: linear-gradient(270deg, #c145b9 ,#c145b9 100%); /* ボタンの背景 */
+    box-shadow: 0px 0px 30px #2984BA; /* ボタンの影 */
+    border-radius: 25px;
+    margin: 0
+}
