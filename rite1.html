@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/rite1.css">
+
+<title>カードの透視</title>
+<audio src="audio/静かな夜長に.mp3" controls autoplay loop></audio>
+
+</head>
+
+<body background="img/436573.jpg">
+
+<header>
+  <p>カードの透視</p>
+</header>
+
+<button id="btn">説明を開く</button>
+
+<main>
+  <ul>
+    <label id="ura1"><img src="img/23079215.jpg"></label>
+    <label id="ura2"><img src="img/23079215.jpg"></label>
+    <label id="ura3"><img src="img/23079215.jpg"></label>
+    <label id="ura4"><img src="img/23079215.jpg"></label>
+    <label id="ura5"><img src="img/23079215.jpg"></label>
+  </ul>
+  <div class="order">
+    <p>指定した数字を透視してください</p>
+    <p>【Ⅲ】</p>
+    <p>あなたが透視した数字は…</p>
+    【<span id="pc_hands"></span>】</div>
+  <div class="conclusion">
+    <span id= "judgement"></span></div>
+  
+  <div><br>
+    <p>
+      CREDITS<br>
+      BGM:<br>
+      DOVA SYNDROME 様:<br>
+      https://dova-s.jp/bgm/play19600.html<br>
+      
+      背景・カードイラスト:<br>
+      ILLUST AC 様:<br>
+      https://www.ac-illust.com/<br>
+    </p>
+  </div>
+</main>
+
+<footer></footer>
+
+<script>
+  //じゃんけん用のSCRIPTを書いてください
+  //if(r==7 && r2==7 && r3==7){}←スリーセブンを作る際
+  // let num = Math.random();  //小数点乱数
+  // let r = Math.ceil(num*3);   //繰り上げ
+  // console.log( r + "です" );
+  let mycard
+  let pcnumber
+
+  $("#ura1").on("click" , function(){
+    mycard=1
+    let num = Math.random();  //小数点乱数
+    let r = Math.ceil(num*5); 
+    pcnumber = r
+    if(r == 1){
+        $("#pc_hands").html("Ⅰ");
+    }
+    if(r == 2){
+        $("#pc_hands").html("Ⅱ");
+    }
+    if(r == 3){
+        $("#pc_hands").html("Ⅲ");
+    }
+    if(r == 4){
+        $("#pc_hands").html("Ⅳ");
+    }
+    if(r == 5){
+        $("#pc_hands").html("Ⅴ");
+    }
+  })
+
+  // console.log( r + "です" );
+  $("#ura2").on("click" , function(){
+    mycard=2
+    let num = Math.random();  //小数点乱数
+    let r = Math.ceil(num*5); 
+    pcnumber = r  
+    if(r == 1){
+        $("#pc_hands").html("Ⅰ");
+    }
+    if(r == 2){
+        $("#pc_hands").html("Ⅱ");
+    }
+    if(r == 3){
+        $("#pc_hands").html("Ⅲ");
+    }
+    if(r == 4){
+        $("#pc_hands").html("Ⅳ");
+    }
+    if(r == 5){
+        $("#pc_hands").html("Ⅴ");
+    }
+  })
+
+  // console.log( pchand + "です" );
+  $("#ura3").on("click" , function(){
+    mycard=3
+    let num = Math.random();  //小数点乱数
+    let r = Math.ceil(num*5); 
+    pcnumber = r  
+    if(r == 1){
+        $("#pc_hands").html("Ⅰ");
+    }
+    if(r == 2){
+        $("#pc_hands").html("Ⅱ");
+    }
+    if(r == 3){
+        $("#pc_hands").html("Ⅲ");
+    }
+    if(r == 4){
+        $("#pc_hands").html("Ⅳ");
+    }
+    if(r == 5){
+        $("#pc_hands").html("Ⅴ");
+    }
+  })
+
+  $("#ura4").on("click" , function(){
+    mycard=4
+    let num = Math.random();  //小数点乱数
+    let r = Math.ceil(num*5); 
+    pcnumber = r  
+    if(r == 1){
+        $("#pc_hands").html("Ⅰ");
+    }
+    if(r == 2){
+        $("#pc_hands").html("Ⅱ");
+    }
+    if(r == 3){
+        $("#pc_hands").html("Ⅲ");
+    }
+    if(r == 4){
+        $("#pc_hands").html("Ⅳ");
+    }
+    if(r == 5){
+        $("#pc_hands").html("Ⅴ");
+    }
+  })
+
+  $("#ura5").on("click" , function(){
+    mycard=5
+    let num = Math.random();  //小数点乱数
+    let r = Math.ceil(num*5); 
+    pcnumber = r  
+    if(r == 1){
+        $("#pc_hands").html("Ⅰ");
+    }
+    if(r == 2){
+        $("#pc_hands").html("Ⅱ");
+    }
+    if(r == 3){
+        $("#pc_hands").html("Ⅲ");
+    }
+    if(r == 4){
+        $("#pc_hands").html("Ⅳ");
+    }
+    if(r == 5){
+        $("#pc_hands").html("Ⅴ");
+    }
+  })
+ //勝ち負けの判定機プログラムです
+
+ $("#ura1 , #ura2 , #ura3 , #ura4 , #ura5").on("click" , function(){
+    if ( mycard == 1 && pcnumber == 3) {
+      $("#judgement").html("<span id= 'judgement'>Congratulations！</span>");
+    }else if ( mycard == 2 && pcnumber == 3) {
+      $("#judgement").html("<span id= 'judgement'>Congratulations！</span>");
+    }else if ( mycard == 3 && pcnumber == 3) {
+      $("#judgement").html("<span id= 'judgement'>Congratulations！</span>");
+    }else if ( mycard == 4 && pcnumber == 3) {
+      $("#judgement").html("<span id= 'judgement'>Congratulations！</span>");
+    }else if ( mycard == 5 && pcnumber == 3) {
+      $("#judgement").html("<span id= 'judgement'>Congratulations！</span>");
+    }else{
+      $("#judgement").html("<span id= 'judgement'>Failure…</span>");
+    }
+    })
+
+
+
+const btn = document.getElementById('btn');
+    btn.addEventListener('click',()=>{
+      alert('以下5枚のカードには裏側に1から5までの数字が書かれています。この中で指定された数字のカードを1枚透視してクリックしてください。');
+    }); 
+</script>
+</body>
+</html>
