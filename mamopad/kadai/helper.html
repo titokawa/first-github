@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/helper.css">
+
+<title>今日のご飯ヘルパー</title>
+<audio src="audio/nohohonkissa.mp3" controls autoplay loop></audio>
+
+</head>
+<body background="img/1171357.jpg">
+
+<header>
+  <h1>タービンさんに聞く！</h1>
+</header>
+
+<main>
+  <ul>
+    <li id="buy1">買う</li>
+    <li id="buy2">買う</li>
+    <li id="buy3">買う</li>
+  </ul>
+
+  <ul>
+    <li id="buy4">フンパツ！</li>
+  </ul>  
+
+</main>
+
+<div crass="credits"><br>
+  <p>
+    CREDITS<br>
+    BGM:<br>
+    甘茶の音楽工房 様:<br>
+    https://amachamusic.chagasi.com/<br>
+    
+    背景:<br>
+    ILLUST AC 様:<br>
+    https://www.ac-illust.com/<br>
+  </p>
+</div>
+
+
+<footer></footer>
+
+<script>
+  //じゃんけん用のSCRIPTを書いてください
+  //if(r==7 && r2==7 && r3==7){}←スリーセブンを作る際
+  // let num = Math.random();  //小数点乱数
+  // let r = Math.ceil(num*3);   //繰り上げ
+  // console.log( r + "です" );
+  let buy1
+  let buy2
+  let buy3
+
+  $("#buy1").on("click" , function(){
+    let num = Math.random();  //小数点乱数
+    let r = Math.ceil(num*21); 
+    pcnumber = r
+    if(r == 1){
+        $("#buy1").html("玉ねぎ");
+    }
+    if(r == 2){
+        $("#buy1").html("にんじん");
+    }
+    if(r == 3){
+        $("#buy1").html("白菜");
+    }
+    if(r == 4){
+        $("#buy1").html("キャベツ");
+    }
+    if(r == 5){
+        $("#buy1").html("牛肉");
+    }
+    if(r == 6){
+        $("#buy1").html("豚肉");
+    }
+    if(r == 7){
+        $("#buy1").html("鶏肉");
+    }
+    if(r == 8){
+        $("#buy1").html("もやし");
+    }
+    if(r == 9){
+        $("#buy1").html("ジャガイモ");
+    }
+    if(r == 10){
+        $("#buy1").html("トマト");
+    }
+    if(r == 11){
+        $("#buy1").html("キクラゲ");
+    }
+    if(r == 12){
+        $("#buy1").html("サトイモ");
+    }
+    if(r == 13){
+        $("#buy1").html("ピーマン");
+    }
+    if(r == 14){
+        $("#buy1").html("ゴーヤ");
+    }
+    if(r == 15){
+        $("#buy1").html("エリンギ");
+    }
+    if(r == 16){
+        $("#buy1").html("ししとう");
+    }
+    if(r == 17){
+        $("#buy1").html("カボチャ");
+    }
+    if(r == 18){
+        $("#buy1").html("大根");
+    }
+    if(r == 19){
+        $("#buy1").html("パプリカ");
+    }
+    if(r == 20){
+        $("#buy1").html("レンコン");
+    }
+    if(r == 21){
+        $("#buy1").html("長ネギ");
+    }
+  })
+
+  $("#buy2").on("click" , function(){
+    let num = Math.random();  //小数点乱数
+    let r = Math.ceil(num*21); 
+    pcnumber = r
+    if(r == 1){
+        $("#buy2").html("玉ねぎ");
+    }
+    if(r == 2){
+        $("#buy2").html("にんじん");
+    }
+    if(r == 3){
+        $("#buy2").html("白菜");
+    }
+    if(r == 4){
+        $("#buy2").html("キャベツ");
+    }
+    if(r == 5){
+        $("#buy2").html("牛肉");
+    }
+    if(r == 6){
+        $("#buy2").html("豚肉");
+    }
+    if(r == 7){
+        $("#buy2").html("鶏肉");
+    }
+    if(r == 8){
+        $("#buy2").html("もやし");
+    }
+    if(r == 9){
+        $("#buy2").html("ジャガイモ");
+    }
+    if(r == 10){
+        $("#buy2").html("トマト");
+    }
+    if(r == 11){
+        $("#buy2").html("キクラゲ");
+    }
+    if(r == 12){
+        $("#buy2").html("サトイモ");
+    }
+    if(r == 13){
+        $("#buy2").html("ピーマン");
+    }
+    if(r == 14){
+        $("#buy2").html("ゴーヤ");
+    }
+    if(r == 15){
+        $("#buy2").html("エリンギ");
+    }
+    if(r == 16){
+        $("#buy2").html("ししとう");
+    }
+    if(r == 17){
+        $("#buy2").html("カボチャ");
+    }
+    if(r == 18){
+        $("#buy2").html("大根");
+    }
+    if(r == 19){
+        $("#buy2").html("パプリカ");
+    }
+    if(r == 20){
+        $("#buy2").html("レンコン");
+    }
+    if(r == 21){
+        $("#buy2").html("長ネギ");
+    }
+  })
+
+  $("#buy3").on("click" , function(){
+    let num = Math.random();  //小数点乱数
+    let r = Math.ceil(num*21); 
+    pcnumber = r
+    if(r == 1){
+        $("#buy3").html("玉ねぎ");
+    }
+    if(r == 2){
+        $("#buy3").html("にんじん");
+    }
+    if(r == 3){
+        $("#buy3").html("白菜");
+    }
+    if(r == 4){
+        $("#buy3").html("キャベツ");
+    }
+    if(r == 5){
+        $("#buy3").html("牛肉");
+    }
+    if(r == 6){
+        $("#buy3").html("豚肉");
+    }
+    if(r == 7){
+        $("#buy3").html("鶏肉");
+    }
+    if(r == 8){
+        $("#buy3").html("もやし");
+    }
+    if(r == 9){
+        $("#buy3").html("ジャガイモ");
+    }
+    if(r == 10){
+        $("#buy3").html("トマト");
+    }
+    if(r == 11){
+        $("#buy3").html("キクラゲ");
+    }
+    if(r == 12){
+        $("#buy3").html("サトイモ");
+    }
+    if(r == 13){
+        $("#buy3").html("ピーマン");
+    }
+    if(r == 14){
+        $("#buy3").html("ゴーヤ");
+    }
+    if(r == 15){
+        $("#buy3").html("エリンギ");
+    }
+    if(r == 16){
+        $("#buy3").html("ししとう");
+    }
+    if(r == 17){
+        $("#buy3").html("カボチャ");
+    }
+    if(r == 18){
+        $("#buy3").html("大根");
+    }
+    if(r == 19){
+        $("#buy3").html("パプリカ");
+    }
+    if(r == 20){
+        $("#buy3").html("レンコン");
+    }
+    if(r == 21){
+        $("#buy3").html("長ネギ");
+    }
+  })
+
+  $("#buy4").on("click" , function(){
+    let num = Math.random();  //小数点乱数
+    let s = Math.ceil(num*7); 
+    buy4 = s
+    if(s == 1){
+        $("#buy4").html("熊の手");
+    }
+    if(s == 2){
+        $("#buy4").html("燕の巣");
+    }
+    if(s == 3){
+        $("#buy4").html("モリーユ");
+    }
+    if(s == 4){
+        $("#buy4").html("浮き袋");
+    }
+    if(s == 5){
+        $("#buy4").html("鶏冠");
+    }
+    if(s == 6){
+        $("#buy4").html("ハンザキ");
+    }
+    if(s == 7){
+        $("#buy4").html("太歳");
+    }
+  })
+
+</script>
+</body>
+</html>
