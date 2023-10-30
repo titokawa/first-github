@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/chatapp.css">
+    <title>Firebase:v9:Chatアプリ</title>
+</head>
+
+<body>
+
+    <!-- コンテンツ表示画面 -->
+
+    <div>
+        <div class="name"> 名前：<input type="text" id="uname"></div>
+        <div>
+            <textarea class="text" id="text" cols="60" rows="20"></textarea>
+            <button id="send">送信</button>
+            <input type="text" id="keyInput" placeholder="削除するメッセージのキーを入力">
+            <button id="remove">削除</button>
+        </div>
+
+        <div>
+            <div class="message" id="output" style="overflow:auto ; height:300px"></div>
+            <img src="imgs/docker_lalavel10.png" class="avatar" alt="User Avatar">
+            <p>アバターを選んでください</p>
+        </div>
+    </div>
+
+
+    <!--/ コンテンツ表示画面 -->
+
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- JQuery -->
+
+    <!--** 以下Firebase **-->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+        import { getDatabase, ref, push, set, onChildAdded, remove, onChildRemoved }
+            from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyARAzqqN2Z-OMQ0Z55V1n4tK9sDvJyCGEQ",
+            authDomain: "gsdemo-94e62.firebaseapp.com",
+            projectId: "gsdemo-94e62",
+            storageBucket: "gsdemo-94e62.appspot.com",
+            messagingSenderId: "315449110795",
+            appId: "1:315449110795:web:92c285676e0b413d9a720e"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);//RealTimeDBに接続
+        const dbRef = ref(db, "chat");//RealtimeDB内の"chat"を使う
+
+        //データ登録処理
+        $("#send").on("click", function () {
+            const msg = {
+                uname: $("#uname").val(),
+                text: $("#text").val(),
+            }
+            const newPostRef = push(dbRef);
+            set(newPostRef, msg);//key,value
+        });
+
+        //Enterキー
+        $("#text").on("keydown", function (e) {
+            console.log(e);
+            if (e.keyCode == 13) {
+                const msg = {
+                    uname: $("#uname").val(),
+                    text: $("#text").val(),
+                };
+                const newPostRef = push(dbRef);
+                set(newPostRef, msg);//key,value
+            }
+        });
+
+        //削除機能
+        $("#remove").on("click", function () {
+            const keyDelete = $("#keyDelete").val(); // 削除するメッセージのキーを入力から取得
+            // Firebase Realtime Database内の "chat" ノードから削除キーを使用してメッセージを削除
+            const messagesRef = ref(db, "chat");
+            onChildAdded(messagesRef, (data) => {
+                const message = data.val();
+                if (message.key === keyDelete) {
+                    const messageKey = data.key;
+                    const messagesRef = ref(db, "chat");
+                    remove(messageToDeleteRef);
+                }
+            });
+        });
+
+        //受信処理
+        onChildAdded(dbRef, function (data) {
+            const msg = data.val(); //Firebaseから値を取得します
+            const key = data.key; //UniqKEY取得
+            let h = '<p>'
+            h += msg.uname;
+            h += '<br>';
+            h += msg.text;
+            h += '</p>'
+            $("#output").append(h);//表示
+            $("#output").scrollTop($('#output')[0].scrollHeight);
+        });
+
+    </script>
+
+
+</body>
+
+</html>
